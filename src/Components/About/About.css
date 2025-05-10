@@ -1,0 +1,117 @@
+#aboutMe {
+    display: grid;
+    background-color: #2B2B2B;
+    align-items: center;
+    padding: 6rem 1rem;
+  }
+  
+  .about-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    column-gap: 2rem;
+    row-gap: 2rem;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  .about-image {
+    height: 450px;
+    width: 100%;
+    object-fit: cover;
+    justify-self: center;
+    border-radius: 15px;
+    opacity: 0;
+    transform: translateY(55px);
+    animation: fadeInUp 1.5s ease-out forwards;
+  }
+  
+  .about-text {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(55px);
+    animation: fadeInUp 1.6s ease-out forwards;
+  }
+  
+  .about-text.highlight {
+    font-style: italic;
+    font-weight: 500;
+    color: #F86F03;
+  }
+  
+  .about-section {
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #fff;
+  }
+  
+  #about-container {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  #about-title {
+    display: inline-block;
+    border-bottom: 3px solid #F86F03;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.3rem;
+    color: #fff;
+  }
+  
+  #me {
+    color: #F86F03;
+  }
+  
+  #cv-button {
+    font-family: Arial, sans-serif;
+    background-color: #F86F03;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px #000000;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    transform: translateY(55px);
+    animation: fadeInUp 1.8s ease-out forwards;
+  }
+  
+  #cv-button:hover {
+    background-color: #fff;
+    color: #F86F03;
+  }
+  
+  /* Keyframes */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(55px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .about-content {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  
+    .about-image {
+      height: 350px;
+    }
+  }
+  * {
+  box-sizing: border-box;
+}

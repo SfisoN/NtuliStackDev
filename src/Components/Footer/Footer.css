@@ -1,0 +1,68 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+footer {
+  background-color: #010101;
+  color: #ccc;
+  padding: 2.5rem 1rem;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Logo or Title in Footer */
+.footer-logo h2 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+
+/* Optional Footer Description Text */
+.footer-text {
+  font-size: 1rem;
+  color: #999;
+  margin-bottom: 1.25rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Social Icons Layout */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+  
+  flex-direction: row;
+}
+
+/* Individual Icon Links */
+.social-icons a {
+  color: #ccc;
+  font-size: 2rem;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #F86F03;
+  transform: scale(1.2);
+}
+
+/* Responsive Text Sizes (Optional) */
+@media (max-width: 480px) {
+  .footer-logo h2 {
+    font-size: 1.5rem;
+  }
+
+  .footer-text {
+    font-size: 0.95rem;
+  }
+
+  .social-icons a {
+    font-size: 1.75rem;
+  }
+}

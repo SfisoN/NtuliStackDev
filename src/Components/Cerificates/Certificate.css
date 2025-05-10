@@ -1,0 +1,76 @@
+ #certificates {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem;
+  padding-bottom: 10rem;
+  gap: 2rem;
+  background-image: url('../../assets/Programming.jpg');
+  background-size: cover;
+}
+
+#cert-title {
+  width: 100%;
+  text-align: center;
+}
+
+.cert-heading {
+  display: inline-block;
+  border-bottom: 3px solid #F86F03;
+  padding-bottom: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+#cert-left {
+  flex: 1 1 50%;
+  min-width: 280px;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.text {
+  color: black;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: larger;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+}
+
+#cert-right {
+  flex: 1 1 45%;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.cert-image {
+  width: 100%;
+  max-height: 400px;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: opacity 0.12s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Optional Hover Effect */
+.cert-image:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cert-container {
+    flex-direction: column;
+
+  }
+  #cert-left, #cert-right {
+    width: 100%;
+  }
+}
