@@ -49,19 +49,19 @@ function Skills(){
              <img src={sklill4} alt="React" className="skills-image" />
                 <span className="skill-label">React</span>
                 <br/>
-                <span className="skill-sub-label">Novice</span>
+                <span className="skill-sub-label">Intermediate</span>
            </div>
            <div className="skill-item">
               <img src={sklill5} alt="java" className="skills-image" />
                 <span className="skill-label">Java</span>
                 <br/>
-                <span className="skill-sub-label">Intermediate</span>
+                <span className="skill-sub-label">Junior</span>
            </div>
            <div className="skill-item">
               <img src={sklill13} alt="c#" className="skills-image" />
                 <span className="skill-label">C#</span>
                 <br/>
-                <span className="skill-sub-label">Intermediate</span>
+                <span className="skill-sub-label">Junior</span>
            </div>
            <div className="skill-item">
               <img src={sklill11} alt="python" className="skills-image" />
@@ -110,7 +110,7 @@ function Skills(){
               <img src={sklill14} alt="python" className="skills-image" />
                 <span className="skill-label">Figma</span>
                 <br/>
-                <span className="skill-sub-label">Junior</span>
+                <span className="skill-sub-label">Intermediate</span>
            </div>
            
            </div>

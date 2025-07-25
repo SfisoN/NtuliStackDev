@@ -9,8 +9,8 @@ function Home(){
         
         <div id="home">
           <div className="profile-component">
-          <div class="profile-left">
-          <p class="intro">Hello World...it's</p>
+          <div class="profile-left">   
+          {/* <p class="intro">Hello World...it's</p> */}
           <h1 class="name">Sifiso Ntuli</h1>
           <h2 class="title">Aspiring Software Developer</h2>
           <p class="description">
