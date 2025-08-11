@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import NavBar from "./Components/Header/NavBar.jsx"
 import Home from "./Components/Hero/Home.jsx"
 import AboutMe from "./Components/About/About.jsx"
