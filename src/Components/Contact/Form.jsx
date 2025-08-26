@@ -53,7 +53,7 @@ function Form() {
         <div className='heading'><h1 id='form-title'>Contact</h1></div>
         <div className='form-contact'>
         <p><i className="fas fa-phone-alt"></i> +27 79 570 7880</p>
-        <p><i className="fas fa-envelope"></i> sifisontulins88@gmail.com</p>
+        <p><i className="fas fa-envelope"></i> sifisontulisn88@gmail.com</p>
         <p><i className="fas fa-map-marker-alt"></i> Pretoria, South Africa</p>
         </div>
         <div className='form-info'>
