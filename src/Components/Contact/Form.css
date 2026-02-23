@@ -1,142 +1,237 @@
-#contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 4rem 2rem;
-    background-image: url(../../assets/Programming.jpg);
-    background-size: cover;
-    background-position: center;
-    box-sizing: border-box;
-    flex-wrap: wrap;
-    gap: 3rem;
-    color: white;
-  }
-  
-  /* Heading */
-  .heading {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  
-  #form-title {
-    display: inline-block;
-    border-bottom: 3px solid #f86f03;
-    padding-bottom: 0.25rem;
-    font-size: 2rem;
-    color: white;
-  }
-  
-  /* Contact Info Left Column */
-  .form-contact {
-    flex: 1;
-    min-width: 250px;
-    max-width: 350px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1.5rem;
-    font-size: 1rem;
-  }
-  
-  .form-contact i {
-    color: #f86f03;
-    margin-right: 10px;
-  }
-  
-  .form-contact p {
-    display: flex;
-    align-items: center;
-    line-height: 1.6;
-  }
-  
-  /* Form Right Column */
-  .form-info {
-    flex: 1.2;
-    min-width: 300px;
-    max-width: 600px;
-    padding: 2rem;
-    border-radius: 10px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .form-input,
-  .form-textarea {
-    width: 100%;
-    padding: 0.75rem;
-    margin-bottom: 1rem;
-    background: #444;
-    color: white;
-    border: none;
-    border-radius: 15px;
-    font-size: 1rem;
-  }
-  
-  .form-textarea {
-    resize: vertical;
-    height: 125px;
-  }
-  
-  .form-row {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-  
-  .form-row .form-input {
-    flex: 1;
-    min-width: 120px;
-  }
-  
-  ::placeholder {
-    color: white;
-  }
-  .button-container{
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-  }
-  
-  .form-button {
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap');
 
-    align-self: center;
-    background-color: #f86f03;
-    padding: 0.75rem 2rem;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: bold;
-    color: white;
-    transition: background-color 0.3s ease;
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 5rem 2rem 6rem;
+  background-color: #0d0d0f;
+  background-image:
+    radial-gradient(ellipse 65% 50% at 10% 20%, rgba(248, 111, 3, 0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 55% 45% at 90% 70%, rgba(80, 40, 120, 0.09) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 40% at 50% 100%, rgba(20, 80, 160, 0.06) 0%, transparent 50%);
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  gap: 3rem;
+  color: #f0ece6;
+  position: relative;
+}
+
+/* Grid overlay */
+#contact::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.022) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  mask-image: radial-gradient(ellipse 90% 90% at 50% 50%, black 30%, transparent 100%);
+}
+
+/* Heading */
+.heading {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+#form-title {
+  display: inline-block;
+  font-family: 'Syne', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  border-bottom: 2px solid #f86f03;
+  padding-bottom: 0.35rem;
+  background: linear-gradient(135deg, #f0ece6 60%, rgba(248, 111, 3, 0.7) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Contact Info Left Column */
+.form-contact {
+  flex: 1;
+  min-width: 250px;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.25rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  position: relative;
+  z-index: 1;
+
+  /* Glass card to match the rest of the site */
+  background: linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 2rem 1.75rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* Small label above each item */
+.form-contact .contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.form-contact .contact-label {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(240, 236, 230, 0.4);
+}
+
+.form-contact p {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  line-height: 1.6;
+  color: rgba(240, 236, 230, 0.85);
+  margin: 0;
+}
+
+.form-contact i {
+  color: #f86f03;
+  font-size: 1.1rem;
+  width: 20px;
+  text-align: center;
+  filter: drop-shadow(0 0 6px rgba(248, 111, 3, 0.3));
+}
+
+/* Divider between contact items */
+.form-contact .contact-item + .contact-item {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 1.25rem;
+}
+
+/* Form Right Column */
+.form-info {
+  flex: 1.2;
+  min-width: 300px;
+  max-width: 580px;
+  padding: 2.25rem 2rem;
+  border-radius: 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* Field labels */
+.field-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(240, 236, 230, 0.45);
+  margin-bottom: 0.35rem;
+  margin-left: 0.25rem;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1.1rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: #f0ece6;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.97rem;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  outline: none;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: rgba(248, 111, 3, 0.5);
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 0 0 3px rgba(248, 111, 3, 0.08);
+}
+
+.form-textarea {
+  resize: vertical;
+  height: 130px;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.form-row .form-input {
+  flex: 1;
+  min-width: 120px;
+}
+
+::placeholder {
+  color: rgba(240, 236, 230, 0.3);
+  font-style: italic;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.form-button {
+  font-family: 'Syne', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  align-self: center;
+  background: linear-gradient(to right, #f86f03, #7a3800);
+  padding: 0.75rem 2.5rem;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  color: white;
+  box-shadow: 0 4px 20px rgba(248, 111, 3, 0.25);
+  transition: opacity 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.form-button:hover {
+  opacity: 0.88;
+  transform: scale(1.05);
+  box-shadow: 0 0 28px rgba(248, 111, 3, 0.35);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  #contact {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 3rem 1.25rem 4rem;
   }
-  
-  .form-button:hover {
-    background-color: #333;
+
+  .form-contact,
+  .form-info {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
   }
-  
-  /* Mobile Responsive */
-  @media (max-width: 768px) {
-    #contact {
-      flex-direction: column;
-      align-items: stretch;
-    }
-  
-    .form-contact,
-    .form-info {
-      width: 100%;
-      max-width: 100%;
-      text-align: center;
-      align-items: center;
-    }
-  
-    .form-contact p {
-      justify-content: center;
-    }
-  
-    .form-row {
-      flex-direction: column;
-    }
+
+  .form-contact p {
+    justify-content: center;
   }
-  
+
+  .form-row {
+    flex-direction: column;
+  }
+}

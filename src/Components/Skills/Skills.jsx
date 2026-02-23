@@ -20,6 +20,7 @@ import sklill17 from "../../assets/postgresql.svg";
 import sklill18 from "../../assets/sqlite.svg";
 import sklill19 from "../../assets/tailwindcss.svg";
 import sklill20 from "../../assets/aws.svg";
+import sklill21 from "../../assets/django-icon.svg";
 
 function Skills() {
   return (
@@ -98,6 +99,13 @@ function Skills() {
           <div className="skill-item">
             <img src={sklill11} alt="python" className="skills-image" />
             <span className="skill-label">Python</span>
+            <br />
+            <span className="skill-sub-label">Junior</span>
+          </div>
+
+          <div className="skill-item">
+            <img src={sklill21} alt="python" className="skills-image" />
+            <span className="skill-label">Django</span>
             <br />
             <span className="skill-sub-label">Junior</span>
           </div>

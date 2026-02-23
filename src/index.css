@@ -1,9 +1,9 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
+  color-scheme: dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 
@@ -13,28 +13,44 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+/* ─── Global Overflow Fix ─────────────────────────────────────── */
+html {
+  overflow-x: hidden;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* ─── Body ────────────────────────────────────────────────────── */
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  padding: 0;
   min-width: 320px;
   min-height: 100vh;
+  overflow-x: hidden; /* removed display:flex and place-items:center — these cause layout issues */
 }
 
+/* ─── Typography ──────────────────────────────────────────────── */
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
 
+/* ─── Links ───────────────────────────────────────────────────── */
+a {
+  font-weight: 500;
+  color: #F86F03;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #ffcc00;
+}
+
+/* ─── Buttons ─────────────────────────────────────────────────── */
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -46,23 +62,12 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
-  border-color: #646cff;
+  border-color: #F86F03;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
 }

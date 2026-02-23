@@ -1,7 +1,7 @@
 import React from "react";
 import "./About.css";
 import myPic from "../../assets/Sifiso.jpg";
-import cv from "../../assets/Sifiso-Ntuli-CV.pdf";
+import cv from "../../assets/Sifiso-CV.pdf.pdf";
 
 function AboutMe() {
   return (
@@ -17,7 +17,7 @@ function AboutMe() {
         <div id="about-description">
           <section className="about-section">
             <p className="about-text">
-              I’m an aspiring full-stack developer driven by a passion for
+              I am a full-stack developer an aspiring technician driven by a passion for
               crafting seamless, high-performing web applications. I thrive on
               continuous learning and growth, always eager to embrace challenges
               that push boundaries and spark meaningful innovation.

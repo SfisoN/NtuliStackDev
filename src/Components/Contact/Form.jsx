@@ -54,7 +54,7 @@ function Form() {
         <div className='form-contact'>
         <p><i className="fas fa-phone-alt"></i> +27 79 570 7880</p>
         <p><i className="fas fa-envelope"></i> sifisontulisn88@gmail.com</p>
-        <p><i className="fas fa-map-marker-alt"></i> Pretoria, South Africa</p>
+        <p><i className="fas fa-map-marker-alt"></i> Kimberley/Pretoria, South Africa</p>
         </div>
         <div className='form-info'>
            <form onSubmit={handleContactSubmit}>

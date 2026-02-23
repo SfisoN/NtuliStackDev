@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap');
+
 /* Universal box sizing */
 * {
   box-sizing: border-box;
@@ -5,9 +7,27 @@
 
 #aboutMe {
   display: grid;
-  background-color: #2B2B2B;
+  background-color: #0d0d0f;
+  background-image:
+    radial-gradient(ellipse 70% 50% at 80% 20%, rgba(248, 111, 3, 0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 55% 45% at 15% 70%, rgba(80, 40, 120, 0.09) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 40% at 50% 100%, rgba(20, 80, 160, 0.06) 0%, transparent 50%);
   align-items: center;
-  padding: 6rem 1.5rem; /* added horizontal padding */
+  padding: 6rem 1.5rem;
+  position: relative;
+}
+
+/* Subtle grid overlay */
+#aboutMe::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.022) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  mask-image: radial-gradient(ellipse 90% 90% at 50% 50%, black 30%, transparent 100%);
 }
 
 .about-content {
@@ -19,6 +39,8 @@
   max-width: 1100px;
   margin: 0 auto;
   padding: 1rem;
+  position: relative;
+  z-index: 1;
 }
 
 .about-image {
@@ -26,19 +48,35 @@
   height: 450px;
   object-fit: cover;
   justify-self: center;
-  border-radius: 15px;
+  border-radius: 14px;
   opacity: 0;
   transform: translateY(55px);
   animation: fadeInUp 1.5s ease-out forwards;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.06),
+    0 8px 32px rgba(0, 0, 0, 0.5),
+    0 0 40px rgba(248, 111, 3, 0.08);
+  filter: brightness(0.95) contrast(1.05);
+  transition: box-shadow 0.4s ease, filter 0.4s ease;
+}
+
+.about-image:hover {
+  box-shadow:
+    0 0 0 1px rgba(248, 111, 3, 0.3),
+    0 12px 48px rgba(0, 0, 0, 0.6),
+    0 0 60px rgba(248, 111, 3, 0.15);
+  filter: brightness(1) contrast(1.05);
 }
 
 .about-text {
+  font-family: 'DM Sans', sans-serif;
   font-size: 1.1rem;
+  line-height: 1.85;
   margin-bottom: 1.5rem;
-  color: #fff;
+  color: rgba(240, 236, 230, 0.85);
   opacity: 0;
   transform: translateY(55px);
-  animation: fadeInUp 1.7s ease-out forwards; /* staggered animation */
+  animation: fadeInUp 1.7s ease-out forwards;
 }
 
 .about-text.highlight {
@@ -50,48 +88,59 @@
 .about-section {
   max-width: 800px;
   margin: 0 auto;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.8;
+  color: rgba(240, 236, 230, 0.85);
 }
 
 #about-container {
   text-align: center;
   margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 #about-title {
   display: inline-block;
-  border-bottom: 3px solid #F86F03;
+  font-family: 'Syne', sans-serif;
   font-size: 2rem;
+  font-weight: 800;
+  border-bottom: 2px solid #F86F03;
   margin-bottom: 1rem;
-  padding-bottom: 0.3rem;
-  color: #fff;
+  padding-bottom: 0.35rem;
+  background: linear-gradient(135deg, #f0ece6 60%, rgba(248, 111, 3, 0.7) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 #me {
   color: #F86F03;
+  -webkit-text-fill-color: #F86F03;
 }
 
 #cv-button {
-  font-family: Arial, sans-serif;
-  background-color: #F86F03;
+  font-family: 'Syne', sans-serif;
+  background: linear-gradient(to right, #F86F03, #7a3800);
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 700;
+  letter-spacing: 0.04em;
   color: #fff;
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 2rem;
   border: none;
-  border-radius: 20px;
+  border-radius: 999px;
   cursor: pointer;
-  box-shadow: 0 2px 6px #000000;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 20px rgba(248, 111, 3, 0.25);
+  transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
   transform: translateY(55px);
-  animation: fadeInUp 1.9s ease-out forwards; /* slightly delayed */
+  animation: fadeInUp 1.9s ease-out forwards;
 }
 
 #cv-button:hover {
-  background-color: #fff;
-  color: #F86F03;
+  opacity: 0.88;
+  transform: scale(1.05);
+  box-shadow: 0 0 28px rgba(248, 111, 3, 0.35);
 }
 
 /* Keyframes */
