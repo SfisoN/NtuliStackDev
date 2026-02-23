@@ -1,4 +1,15 @@
-/* Base container */
+/* ─── Global Overflow Fix ─────────────────────────────────────── */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* ─── Base container ──────────────────────────────────────────── */
 .container, #about-container, #projects, #certificates, #contact {
   max-width: 1100px;
   margin: 0 auto;
@@ -6,20 +17,24 @@
   width: 100%;
 }
 
-/* Navbar */
+/* ─── Navbar ──────────────────────────────────────────────────── */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1rem;
+  padding: 1rem;
   flex-wrap: wrap;
   border-bottom: 2px solid #f0a500;
+  width: 100%;
 }
 
 nav ul {
   display: flex;
   gap: 1.5rem;
   flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 nav a {
@@ -28,7 +43,7 @@ nav a {
   text-decoration: none;
 }
 
-/* About */
+/* ─── About ───────────────────────────────────────────────────── */
 .about-content {
   display: flex;
   flex-wrap: wrap;
@@ -44,17 +59,19 @@ nav a {
 
 #about-description {
   flex: 2 1 500px;
+  min-width: 0; /* prevents flex child from overflowing */
 }
 
-/* Projects */
+/* ─── Projects ────────────────────────────────────────────────── */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
   padding: 1rem 0;
+  width: 100%;
 }
 
-/* Certificates */
+/* ─── Certificates ────────────────────────────────────────────── */
 #certificates {
   max-width: 900px;
   margin: 0 auto;
@@ -62,19 +79,22 @@ nav a {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
+  width: 100%;
 }
 
 #cert-left, #cert-right {
   flex: 1 1 400px;
+  min-width: 0; /* prevents flex child from overflowing */
 }
 
-/* Form */
+/* ─── Form ────────────────────────────────────────────────────── */
 .form-info form {
   max-width: 600px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  width: 100%;
 }
 
 .form-input, .form-textarea {
@@ -86,12 +106,13 @@ nav a {
   color: #ddd;
 }
 
-/* Footer */
+/* ─── Footer ──────────────────────────────────────────────────── */
 footer {
   background-color: #000;
   color: #ddd;
   padding: 1.5rem 1rem;
   text-align: center;
+  width: 100%;
 }
 
 .social-icons a {
@@ -104,7 +125,7 @@ footer {
   color: #ffcc00;
 }
 
-/* Media Query for Mobile */
+/* ─── Media Query for Mobile ──────────────────────────────────── */
 @media (max-width: 768px) {
   nav ul {
     justify-content: center;
