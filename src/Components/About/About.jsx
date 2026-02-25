@@ -17,7 +17,7 @@ function AboutMe() {
         <div id="about-description">
           <section className="about-section">
             <p className="about-text">
-              I am a full-stack developer an aspiring technician driven by a passion for
+              I am a full-stack developer and an aspiring technician driven by a passion for
               crafting seamless, high-performing web applications. I thrive on
               continuous learning and growth, always eager to embrace challenges
               that push boundaries and spark meaningful innovation.
