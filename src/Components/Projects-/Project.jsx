@@ -21,8 +21,9 @@ function Project() {
       technologies: "React + Vite + Tailwind CSS",
       image: khs,
       github: "",
-      site: "https://www.kbhs.co.za/",
+      site: "https://kimberley-boys-high-school.netlify.app/",
       category: "Web",
+      deployed: true,
     },
     {
       id: 2,
@@ -32,6 +33,7 @@ function Project() {
       github: "https://github.com/SfisoN/To-Do-List",
       site: "https://mylistto.netlify.app/",
       category: "Web",
+      deployed: true,
     },
     {
       id: 7,
@@ -41,6 +43,7 @@ function Project() {
       github: "https://github.com/SfisoN/Weather-Dashboard",
       site: "https://weather-dashboard-one-ebon.vercel.app/",
       category: "Web",
+      deployed: true,
     },
     {
       id: 9,
@@ -50,6 +53,7 @@ function Project() {
       github: "https://github.com/SfisoN/heyCreativ-Website",
       site: "https://heycreativ.netlify.app/",
       category: "Web",
+      deployed: true,
     },
     {
       id: 1,
@@ -59,8 +63,8 @@ function Project() {
       github: "https://github.com/SfisoN/HTML-CSS-JS-Tas",
       site: "https://github.com/SfisoN/HTML-CSS-JS-Task",
       category: "Web",
+      deployed: false,
     },
-
     {
       id: 3,
       name: "Login Form",
@@ -69,6 +73,7 @@ function Project() {
       github: "https://github.com/SfisoN/Login-Form",
       site: "https://github.com/SfisoN/Login-Form",
       category: "App",
+      deployed: false,
     },
     {
       id: 4,
@@ -78,6 +83,7 @@ function Project() {
       github: "https://github.com/SfisoN/Java-MVC-App",
       site: "https://github.com/SfisoN/Java-MVC-App",
       category: "App",
+      deployed: false,
     },
     {
       id: 5,
@@ -87,6 +93,7 @@ function Project() {
       github: "https://github.com/SfisoN/Python-GUI-Tkinter",
       site: "https://github.com/SfisoN/Python-GUI-Tkinter",
       category: "App",
+      deployed: false,
     },
     {
       id: 6,
@@ -96,6 +103,7 @@ function Project() {
       github: "https://github.com/SfisoN/C-MenuDrivenApplicationProject",
       site: "https://github.com/SfisoN/C-MenuDrivenApplicationProject",
       category: "Other",
+      deployed: false,
     },
   ];
 
@@ -159,14 +167,16 @@ function Project() {
               >
                 Git Repository
               </a>
-              <a
-                href={project.site}
-                className="visit-btn"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Visit Site
-              </a>
+              {project.deployed && (
+                <a
+                  href={project.site}
+                  className="visit-btn"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Visit Site
+                </a>
+              )}
             </div>
           </div>
         ))}
