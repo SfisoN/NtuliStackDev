@@ -9,12 +9,23 @@ import python from "../../assets/python.jfif";
 import weather from "../../assets/weather1.jpg";
 import khs from "../../assets/logo.jpg";
 import hey from "../../assets/hclogo.png";
+import tps from "../../assets/tps.jpg";
 
 function Project() {
   const [activeFilter, setActiveFilter] = useState("All");
   const [showAll, setShowAll] = useState(false);
 
   const projects = [
+    {
+      id: 10,
+      name: "Thusang Primary School Application Portal",
+      technologies: "HTML + CSS + JS",
+      image: tps,
+      github: "",
+      site: "https://thusangpsapp.netlify.app/",
+      category: "Web",
+      deployed: true,
+    },
     {
       id: 8,
       name: "Kimberley Boys High School Website",
